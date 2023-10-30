@@ -1,1 +1,37 @@
 # Teoria-Informazione-Trasmissione
+
+Appunti riguardanti il corso di "Teoria dell'informazione e delle trasmissioni" - A.A 2023/2024.
+
+# Lezioni
+
+- Lezione-02 del 06 ottobre 2023
+
+  - Introduzione
+
+  - Codifica sorgente
+
+- Lezione-03 del 10 ottobre 2023
+
+  - Codici non singolari, univocamente decodificabili e istantanei
+
+  - Disuguaglianza di Kraft
+
+- Lezione-04 del 13 ottobre 2023
+
+  - Codice di Shannon
+
+  - Codice di Huffman
+
+- Lezione-05 del 20 ottobre 2023
+
+  - Entropia
+
+  - Teoremi sull'entropia
+
+  - Sardinas-Patterson
+
+- Lezione-06 del 24 ottobre 2023
+  - Primo teorema di Shannon
+  - Codifica a blocchi
+    - Primo teorema di Shannon con codifica a blocchi
+  - Entropia relativa
