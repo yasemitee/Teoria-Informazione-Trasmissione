@@ -25,10 +25,12 @@ $ "avente" $
 $ l_C_k (x_1, dots, x_k) = l_c(x_1)+ dots +l_c(x_k) $
 Chiaramente se $c$ è univocamente decodificabile, la sua estensione _k-esima_ è non singolare per ogni $k >= 1$.
 == Definizione
-Teorema: $l_1, dots, l_m in NN$ sono le lunghezze di un codice _D-ario_ univocamente decodificabile per una sorgente di $m$ simboli se e solo se
+#theorem(name: "Disuguaglianza di Kraft-McMillan", numbering: none)[
+$l_1, dots, l_m in NN$ sono le lunghezze di un codice _D-ario_ univocamente decodificabile per una sorgente di $m$ simboli se e solo se
 $ sum_(i=1)^m D^(-l_i) <= 1 $
-
-Dimostrazione: Valendo la disuguaglianza di kraft per le lunghezze sappiamo che sono le lunghezze di un codice istantaneo (come abbiamo già dimostrato).
+]<thm>
+#proof[
+Valendo la disuguaglianza di kraft per le lunghezze sappiamo che sono le lunghezze di un codice istantaneo (come abbiamo già dimostrato).
 
 Ora dobbiamo dimostrare che se $c:Chi -> D^+$ è univocamente decodificabile allora le sue lunghezze $l_c (x_1), dots, l_c (x_m)$ soddisfano la disuguaglianza di Kraft. Quindi per ogni $k >= 1$ vale che
 $ (sum_(x in Chi) D^(-l_c (x)))^k = sum_(x_1 in Chi) dots sum_(x_k in Chi)  D^(-l_c (x_1)) times dots times D^(-l_c (x_k)) $
@@ -44,7 +46,7 @@ Ora, siccome $c$ è univocamente decodificabile, $C_k$ è non singolare per ogni
 $ underbrace((sum_(x in Chi) D^(-l_c)(x))^k, M >= 0) <= sum_(n=1)^(k l_max) |Chi_n ^ k| D^(-n) <= sum_(n=1)^(k l_max) cancel(D^n) cancel(D^(-n)) = k l_max $
 $ "può essere riscritta come" M^k <= k l_max $
 Quindi la relazione sopra vale per ogni $k >= 1$, se $M > $1 ci sarebbe un $k_0$ tale che per ogni $k >= k_0$ si avrebbe $M^k >= k l_max$. Qundi $M <= 1$
-
+]<proof>
 Graficamente:
 #v(12pt)
 
@@ -54,4 +56,4 @@ Graficamente:
 
 #v(12pt)
 
-
+Quindi non cambia la situazione prendendo un codice univocamente decodificabile anziché usare un codice istantaneo, di conseguenza è meglio usare un codice istantaneo dato che sono decodificabili istantaneamente.
