@@ -19,9 +19,10 @@
 
 Il prossimo risultato rivela che i codici di Shannon forniscono una descrizione delle realizzazioni di X di lunghezza media quasi ottimale rispetto a tutti i codici istantanei.
 
-== Teorema 1
 
-#theorem(name:"Primo teoreama di Shannon")[Per ogni sorgente $angle.l Chi, p angle.r$ con $Chi = {x_1, dots, x_m}$ e $p = {p_1, dots, p_n}$. Dato il codice istantaneo di Shannon $c$ con lunghezze $l_i = l_c (x_i)$ tali che $l_i = ceil(log_D 1/p_i)$ per $i = 1,dots, m$, vale $ EE[l_c] < H_D (Chi) + 1 $
+== Introduzione
+
+#lemma(numbering: none)[Per ogni sorgente $angle.l Chi, p angle.r$ con $Chi = {x_1, dots, x_m}$ e $p = {p_1, dots, p_n}$. Dato il codice istantaneo di Shannon $c$ con lunghezze $l_i = l_c (x_i)$ tali che $l_i = ceil(log_D 1/p_i)$ per $i = 1,dots, m$, vale $ EE[l_c] < H_D (Chi) + 1 $
 ]<thm>
 Quindi con questo teorema, Shannon capisce che il suo codice paga al più 1 bit in più di informazione aggiuntivo.
 
@@ -51,8 +52,8 @@ Quindi Shannon sta spostando il problema alla sorgente, da $angle.l Chi, p angle
  
  Siamo ora pronti per enunciare e dimostrare il vero primo teoreama di Shannon o _source coding_.
 
- == Teorema 2 (Primo teorema di Shannon)
- #theorem(name: "Primo teorema di Shannon")[
+ == Teorema (Primo teorema di Shannon)
+ #theorem(name: "Primo teorema di Shannon", numbering: none)[
  Sia $C_n: Chi^n -> D^+$ un codice di Shannon D-ario a blocchi per la sorgente $angle.l Chi, p angle.r$, ossia $l_c (x_1, dots, x_n) = ceil(log 1/P(x_1, dots, x_n))$ allora 
  $ lim_(n->oo) 1/n EE[l_C_n] = H_D (Chi) $
  ]<thm>

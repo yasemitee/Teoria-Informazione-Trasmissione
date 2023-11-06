@@ -16,6 +16,7 @@
 )
 
 = Ottimalità del codice di Huffman
+== Introduzione
 Ricordiamo che un codice di Huffman è costruito con il seguente sistema (Algoritmo di Huffman):
 + i simboli sorgente vengono ordinati in base alle probabilità;
 + si crea un nuovo modello di sorgente in cui i $D$ simboli meno frequenti sono rimpiazzati da un nuovo simbolo con probabilità pari alla somma delle loro probabilità;
@@ -34,6 +35,8 @@ $m = (D-1)K+1$, quindi è divisibile per $D-1$ con resto 1.
 Procediamo ora a dimostrare l’ottimalità del codice di Huffman nell’ambito dei codici sorgente
 istantanei. Prima di dimostrare il teorema, dobbiamo però fare una semplice osservazione preliminare. Ovvero: da un codice di Huffman _D-ario_ per una sorgente di $m − D + 1$ simboli possiamo ricavare un codice di Huffman D-ario per una sorgente di $m$ simboli semplicemente sostituendo un simbolo sorgente con D nuovi simboli cosicché le probabilità assegnate ad essi siano tutte più
 piccole di quelle dei rimanenti m − D vecchi simboli.
+
+== Lemma sulla generazione con giustapposizione
 
 #lemma(numbering:none)[
 Sia $c'$ un codice _D-ario_ di Huffman per la sorgente $Chi' = {x_1, dots, x_(m-D+1)}$ con probabilità $p_1 >= dots >= p_(m-D+1)$. Sia $Chi$ la sorgente di $m$ simboli ${x_1, dots, x_(k-1), x_(k+1), dots, x_(m+1)}$ ottenuta da $Chi'$ togliendo $x_k$ e aggiungendo $D$ nuovi simboli $x_(m-D+2), dots, x_(m+1)$ con probabilità $p_(m-D+2), dots, p_(m+1)$ tali che $0 < underbrace(p_(m-D+2)"," dots"," p_(m+1), "nuove prob") < p_(m-D+1)$ e $p_(m-D+2) + dots + p_(m+1) = p_k$. Allora il codice 
@@ -57,6 +60,9 @@ In sostanza sto dicendo che se $c(x)$ è uguale a $c'(x)$ fino a $x_k$ escluso e
 #proof()[
   La dimostrazione è ovvia considerando che dopo il primo passo nella costruzione del codice di Huffman per $Chi$ otteniamo $Chi'$ come nuova sorgente. Quindi i due codici differiscono solo per le codifiche ai $D$ simboli $x_(m-D+2), dots, x_(m+1)$ che sono quelli meno probabili in $Chi$. Per definizione dell'algoritmo di Huffman, le codifiche dei simboli meno probabili di $Chi$ sono definite in termini del codice di Huffman per $Chi'$ esattamente come descritto nel sistema precedente.
 ]<proof>
+
+== Teorema sull'ottimalità del codice di Huffman
+
 #theorem(name:"Ottimalità del codice di Huffman", numbering:none)[
 Data una sorgente $angle.l Chi, p angle.r$ con $D > 1$, il codice _D-ario_ $c$ di Huffman minimizza $EE[l_c]$ fra tutti i codici _D-ari_ istantanei per la medesima sorgente.
 
