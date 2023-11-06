@@ -31,7 +31,14 @@ Appunti riguardanti il corso di "Teoria dell'informazione e delle trasmissioni" 
   - Sardinas-Patterson
 
 - Lezione-06 del 24 ottobre 2023
+
   - Primo teorema di Shannon
   - Codifica a blocchi
     - Primo teorema di Shannon con codifica a blocchi
   - Entropia relativa
+
+- Lezione-07 del 31 ottobre 2023
+
+  - Dimostrazione dell'ottimalità del codice di Huffman
+    - Lemma sulla generazione con giustapposizione
+    - Teorema sull'ottmalità del codice di Huffman
