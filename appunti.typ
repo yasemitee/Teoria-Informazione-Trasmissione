@@ -43,7 +43,7 @@
 //Lezione 31/10/2023
 
 #include "2023-10-31.typ"
-
+//pagebrak non messo perché la lezione dopo è un continuo
 //Lezione 03/11/2023
 
 #include "2023-11-03.typ"
