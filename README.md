@@ -42,3 +42,8 @@ Appunti riguardanti il corso di "Teoria dell'informazione e delle trasmissioni" 
   - Dimostrazione dell'ottimalità del codice di Huffman
     - Lemma sulla generazione con giustapposizione
     - Teorema sull'ottmalità del codice di Huffman
+
+- Lezione-08 del 31 ottobre 2023
+
+  - Fine del teorema sull'ottimalità del codice di Huffman
+  - Disuguaglianza di Kraft-McMillan

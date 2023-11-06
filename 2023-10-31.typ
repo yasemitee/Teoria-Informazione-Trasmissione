@@ -125,5 +125,17 @@ $ = underbrace(underbrace((p(r) - p(u)), >=0) underbrace((l_c_2(u) - l_c_2(r)),<
 I segni delle differenze sono determinati dalla scelta di $u,v,r,s$ in quanto
 $ max{p(u),p(v)} <= min{p(r), p(s)}," "min{l_c_2(r),l_c_2(s)} >= max{L_c_2(u), l_c_2(v)} $
 Quindi abbiamo dimostrato che $underline(EE[l_tilde(c)_2] <= EE[l_c_2])$ (lo "sfidante" migliore è $tilde(c)_2$).
+
+Notiamo ora che dopo lo scambio con $r$ e $s$, $u$ e $v$ sono diventati fratelli in $tilde(c)_2$. Quindi esiste $omega in {0,1}^*$ tale che $tilde(c)_2(u) = omega 0$ e $tilde(c)_2(v) = omega 1$. Ora per applicare l'ipotesi induttiva, costruisco un altro codice $c'_2$ per $angle.l Chi', p' angle.r$ così definito 
+$ c'_2 = cases(
+  tilde(c)_2 (x) "se" x != z,
+  omega "     se" x != z
+) $
+Possiamo allora scrivere, ricordando che $p'(z) = p(u) + p(v)$,
+$ EE[l_tilde(c)_2] = sum_(x in Chi:x!=z) p'(x) l_tilde(c)_2 (x) + p(u)(l_c'_2(z)+1) + p(v)(l_c'_2(z)+1) $
+$ = sum_(x in Chi:x!=z) p'(x) l_tilde(c)_2 (x) + p'(z)l_c'_2(z)+p'(z) $
+$ underline(= EE[l_c'_2] + p'(z)) $
+Adesso è giunto il momento di trarre le dovute conclusioni ricordando le disuguaglianze precedentemente ottenute, e utilizzando l'ipotesi induttiva per stabilire che $EE[l_c'] <= EE[l_c'_2]$, possiamo quindi scrivere
+$ EE[l_c] = EE[l_c'] + p'(z) <= EE[l_c'_2] + p'(z) = EE[l_tilde(c)_2] <= EE[l_c_2] $
 ]<proof>
 
