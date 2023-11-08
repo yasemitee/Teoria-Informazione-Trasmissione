@@ -46,14 +46,16 @@ Ora, siccome $c$ è univocamente decodificabile, $C_k$ è non singolare per ogni
 $ underbrace((sum_(x in Chi) D^(-l_c)(x))^k, M >= 0) <= sum_(n=1)^(k l_max) |Chi_n ^ k| D^(-n) <= sum_(n=1)^(k l_max) cancel(D^n) cancel(D^(-n)) = k l_max $
 $ "può essere riscritta come" M^k <= k l_max $
 Quindi la relazione sopra vale per ogni $k >= 1$, se $M > $1 ci sarebbe un $k_0$ tale che per ogni $k >= k_0$ si avrebbe $M^k >= k l_max$. Qundi $M <= 1$
-]<proof>
-Graficamente:
+
+_Graficamente:_
 #v(12pt)
 
 #figure(
     image("assets/2023-11-03 dimostrazione-McMillan.svg", width: 100%)
 )
 
-#v(12pt)
+Quindi dopo $k>=1$ (il momento in cui vale la relazione) se $M^k$ è maggiore di 1 allora ad un certo punto sta sopra $k l_max$ (quindi non va bene), mentre se $M^k$ è compreso tra 0 e 1 allora sta sotto $k l_max$.
 
+#v(12pt)
+]<proof>
 Quindi non cambia la situazione prendendo un codice univocamente decodificabile anziché usare un codice istantaneo, di conseguenza è meglio usare un codice istantaneo dato che sono decodificabili istantaneamente.
