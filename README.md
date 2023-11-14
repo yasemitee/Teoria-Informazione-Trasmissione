@@ -43,7 +43,14 @@ Appunti riguardanti il corso di "Teoria dell'informazione e delle trasmissioni" 
     - Lemma sulla generazione con giustapposizione
     - Teorema sull'ottmalità del codice di Huffman
 
-- Lezione-08 del 31 ottobre 2023
+- Lezione-08 del 03 novembre 2023
 
   - Fine del teorema sull'ottimalità del codice di Huffman
   - Disuguaglianza di Kraft-McMillan
+
+- Lezione-09 del 07 novembre 2023
+
+  - Derivati dell'entropia
+    - Entropia congiunta
+    - Entropia condizionale
+    - Chain rule per l'entropia
