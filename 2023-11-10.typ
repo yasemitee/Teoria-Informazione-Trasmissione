@@ -37,7 +37,13 @@ $ I(XX,YY) = H(X) - 0 = H(X) $
 - Possiamo usare la chain rule per l'entropia, $H(XX,YY) = H(YY) + H(XX | YY)$, per riscrivere l'informazione mutua come:
 $ I(XX,YY) = H(XX) - H(XX | YY) = H(XX) + H(YY) - H(XX,YY) $
 Quindi graficamente le relazioni fra entropie e informazione muta è:
-(AGGIUNGI DISEGNO)
+#v(12pt)
+
+#figure(
+    image("assets/2023-11-10 informazione mutua.png", width: 65%)
+)
+
+#v(12pt)
 
 - $H(XX) = H(XX | YY) + I(XX,YY)$
 - $H(YY) = H(YY | XX) + I(XX,YY)$
