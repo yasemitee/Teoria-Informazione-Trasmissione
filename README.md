@@ -50,7 +50,12 @@ Appunti riguardanti il corso di "Teoria dell'informazione e delle trasmissioni" 
 
 - Lezione-09 del 07 novembre 2023
 
-  - Derivati dell'entropia
-    - Entropia congiunta
-    - Entropia condizionale
-    - Chain rule per l'entropia
+  - Entropia congiunta
+  - Entropia condizionale
+  - Chain rule per l'entropia
+
+- Lezione-10 del 23 novembre 2023
+
+  - Informazione mutua
+    - Data processing inequality
+    - Disuguaglianza di Fano

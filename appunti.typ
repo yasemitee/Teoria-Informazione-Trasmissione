@@ -50,4 +50,10 @@
 
 #pagebreak()
 
+//Lezione 11/07/2023
+
 #include "2023-11-07.typ"
+
+//Lezione 10/11/2023
+
+#include "2023-11-10.typ"

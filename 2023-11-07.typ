@@ -13,13 +13,13 @@ e p(y | x) è la condizionata di $y$ su $x$, ovvero la probabilità che si verif
 $ p(y | x) = p(x, y) / p(x) $
 
 == Chain rule per entropia
-Chain rule per entropia è un teorema che stabilisce una relazione fra entropia, entropia congiunta ed entropia condizionale così denfinita,
+Chain rule per entropia è una regola che stabilisce una relazione fra entropia, entropia congiunta ed entropia condizionale così denfinita,
 $ H(XX | YY) = underbrace(H(XX), "entropia \ndi un evento") + underbrace(H(YY | XX), "entropia \nconfizionata di Y su X") $
-oppure
-$ H(XX | YY) =  H(YY) + H(XX + YY) $
-Il risultato è quindi l'entropia dei due eventi.
+Questa formula esprime l'entropia congiunta come la somma dell'entropia marginale di $XX$ e dell'entropia condizionale di $YY$ dato $XX$. In altre parole, l'entropia congiunta di due variabili casuali è la somma dell'entropia della prima variabile e dell'entropia condizionale della seconda variabile data la prima.
 
-Notiamo che questa relazione vale anche per gli spazi condizionati, ovvero
+è possibile anche riscriverla come:
+$ H(XX | YY) =  H(YY) + H(XX + YY) $
+Notiamo che questa relazione vale anche per gli spazi condizionati, ovvero:
 $ H(XX,YY | ZZ) = H(XX | ZZ) + H(YY | XX,ZZ) $
 #pagebreak()
 == Esercizi
@@ -75,7 +75,6 @@ $ H(R | a_1) = sum_(j=1)^5 p(b_j | a_1) dot log_2 1/p(b_j | a_1) = (0,2 dot log_
 $ H(R | a_2) = sum_(j=1)^5 p(b_j | a_2) dot log_2 1/p(b_j | a_2) = 0,2 dot log_2 1/(0,2) + (0,1 dot log_2 1/(0,1)) dot 3 + 0,5 dot log_2 1/(0,5) = 1,96 "bit" $ 
 $ H(R | a_3) = sum_(j=1)^5 p(b_j | a_3) dot log_2 1/p(b_j | a_3) = 0,6 dot log_2 1/(0,6) + (0,1 dot log_2 1/(0,1)) dot 4 = 1,77 "bit"$
 $ H(R | a_4) = sum_(j=1)^5 p(b_j | a_4) dot log_2 1/p(b_j | a_4) = 0,3 dot log_2 1/(0,3) + (0,1 dot log_2 1/(0,1)) dot 3 + 0,3 dot log_2 1/(0,4) = 2,046 "bit" $
-#pagebreak()
 Ora andiamo a sostituire i dati alla formula originale
 $ H(R | S)= sum_(i=1)^4 p(a_i) dot H(R | a_i) $
 $ = (0,2 dot 2,246) + (0,3 dot 1,96) + (0,1 dot 1,77) + (0,4 dot 2,046) = underline(2","033 "bit") $
