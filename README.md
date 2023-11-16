@@ -54,8 +54,15 @@ Appunti riguardanti il corso di "Teoria dell'informazione e delle trasmissioni" 
   - Entropia condizionale
   - Chain rule per l'entropia
 
-- Lezione-10 del 23 novembre 2023
+- Lezione-10 del 10 novembre 2023
 
   - Informazione mutua
     - Data processing inequality
     - Disuguaglianza di Fano
+
+- Lezione-11 del 14 novembre 2023
+
+  - Codifica di canale
+  - Canale senza memoria
+  - Canale binario senza rumore
+  - Canale binario simmetrico

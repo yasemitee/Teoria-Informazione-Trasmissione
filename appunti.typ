@@ -57,3 +57,9 @@
 //Lezione 10/11/2023
 
 #include "2023-11-10.typ"
+
+#pagebreak()
+
+//Lezione 14/11/2023
+
+#include "2023-11-14.typ"
