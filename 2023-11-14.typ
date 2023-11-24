@@ -21,7 +21,7 @@ Un canale si dice senza rumore quando non introduce alcun rumore durante la tras
 #v(12pt)
 
 #figure(
-    image("assets/2023-11-14 canale-senza-memoria.svg", width: 20%)
+    image("assets/2023-11-14 canale-senza-memoria.png", width: 15%)
 )
 
 #v(12pt)
@@ -30,7 +30,7 @@ In un canale binario simmetrico, la probabilità di un errore di trasmissione è
 #v(12pt)
 
 #figure(
-    image("assets/2023-11-14 canale-simmetrico.svg", width: 20%)
+    image("assets/2023-11-14 canale-simmetrico.png", width: 15%)
 )
 
 #v(12pt)
@@ -43,7 +43,7 @@ Supponiamo di voler calcolare la capacità del canale:
 #v(12pt)
 
 #figure(
-    image("assets/2023-11-14 canale-senza-memoria.svg", width: 20%)
+    image("assets/2023-11-14 canale-senza-memoria.png", width: 15%)
 )
 
 #v(12pt)
@@ -61,7 +61,7 @@ Supponiamo di voler calcolare la capacità del canale:
 #v(12pt)
 
 #figure(
-    image("assets/2023-11-14 canale-rumoroso.svg", width: 25%)
+    image("assets/2023-11-14 canale-rumoroso.png", width: 15%)
 )
 
 #v(12pt)
@@ -79,16 +79,16 @@ Per come è costruito il canale vediamo che $p(0) = p(1) = p(2)$
 $ H(YY) = (1/cancel(3) log_2 3) dot cancel(3) = log_2 3 $
 *Quindi*
 $C = max_p(x) underbrace(H(XX), log_2 3) - underbrace((H(XX | YY)),1) = (log_2 3) - 1 $
+#pagebreak()
 === Capacità su un canale simetrico
 Supponiamo di voler calcolare la capacità del canale:
 #v(12pt)
 
 #figure(
-    image("assets/2023-11-14 canale-simmetrico.svg", width: 20%)
+    image("assets/2023-11-14 canale-simmetrico.png", width: 15%)
 )
 
 #v(12pt)
-#pagebreak()
 Riscriviamo 
 $ C = max_p(x) H(YY) - [p(XX = 0) dot H(YY | XX = 0) + p(XX = 1) dot HH(YY | XX = 1)] $
 $ H(YY | XX = 0) = underbrace(p(YY= 0 | XX = 0), 1-p) dot log_2 1/p(YY=0 | XX = 0) + underbrace(p(YY = 1 | XX = 0), p) dot log_2 1/p(YY = 1 | XX=0) $
