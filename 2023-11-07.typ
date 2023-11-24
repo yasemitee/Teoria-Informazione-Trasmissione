@@ -4,8 +4,8 @@ Siano $XX$ e $YY$ due variabili casuali con valori in insiemi finiti $Chi$ e $Y$
 $ H(XX,YY) = sum_(x in Chi) sum_(y in Y) p(x,y) log_2 1/ (p (x,y)) $
 Possiamo pensare all'entropia congiunta come al numero medio di bit necessari per rappresentare una coppia di valori estratti da $Chi$ e $Y$.
 == Entropia condizionale
-Siano $XX$ e $YY$ due variabili casuali con valori in insiemi finiti $Chi$ e $Y$, detta $p$ la loro distribuzione congiunta $p(x,y) = P(XX = x, YY = y)$, definiamo l'entropia condizionale $H(YY,XX)$ come 
-$ H(YY,XX) = sum_(x in Chi) p(x) dot H(YY | XX = x) =  sum_(x in Chi) p(x) (sum_(y in Y) p(y|x) log_2 1/p(y | x))$
+Siano $XX$ e $YY$ due variabili casuali con valori in insiemi finiti $Chi$ e $Y$, detta $p$ la loro distribuzione congiunta $p(x,y) = P(XX = x, YY = y)$, definiamo l'entropia condizionale $H(YY | XX)$ come 
+$ H(YY | XX) = sum_(x in Chi) p(x) dot H(YY | XX = x) =  sum_(x in Chi) p(x) (sum_(y in Y) p(y|x) log_2 1/p(y | x)) $
 $ = sum_(x in Chi) sum_(y in Y) p(x,y) dot log_2 1/p(y | x) $
 dove p(x) è la marginale su $Chi$, ovvero la probabilità di un singolo evento o di un insieme di eventi in un sottoinsieme delle variabili, senza tener conto delle altre variabili.
 $ p(x) = sum_(y in Y) p(x,y) $
@@ -14,11 +14,11 @@ $ p(y | x) = p(x, y) / p(x) $
 
 == Chain rule per entropia
 Chain rule per entropia è una regola che stabilisce una relazione fra entropia, entropia congiunta ed entropia condizionale così denfinita,
-$ H(XX | YY) = underbrace(H(XX), "entropia \ndi un evento") + underbrace(H(YY | XX), "entropia \nconfizionata di Y su X") $
+$ H(XX,YY) = underbrace(H(XX), "entropia \ndi un evento") + underbrace(H(YY | XX), "entropia \nconfizionata di Y su X") $
 Questa formula esprime l'entropia congiunta come la somma dell'entropia marginale di $XX$ e dell'entropia condizionale di $YY$ dato $XX$. In altre parole, l'entropia congiunta di due variabili casuali è la somma dell'entropia della prima variabile e dell'entropia condizionale della seconda variabile data la prima.
 
 è possibile anche riscriverla come:
-$ H(XX | YY) =  H(YY) + H(XX + YY) $
+$ H(XX,YY) =  H(YY) + H(XX + YY) $
 Notiamo che questa relazione vale anche per gli spazi condizionati, ovvero:
 $ H(XX,YY | ZZ) = H(XX | ZZ) + H(YY | XX,ZZ) $
 #pagebreak()

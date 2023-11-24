@@ -36,7 +36,7 @@ Immaginiamo di voler modellare il lancio di una moneta.
 L'entropia binaria è su definita su una variabile casuale Bernoulliana $XX in {0,1}$ dove
 $P(XX = 1) = p$ e $P(XX = 0) = 1 - p$, per $p in [0,1]$.
 Quindi dalla definizione di entropia abbiamo che $H(x) = h(p)$ dove
-$ h(p) = p log_2 (1/2) + (1-p) log_2 (1/1-p) $
+$ h(p) = p log_2 (1/2) + (1-p) log_2 (1/(1-p)) $
 
 #v(12pt)
 
