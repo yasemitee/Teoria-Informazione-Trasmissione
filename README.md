@@ -66,3 +66,7 @@ Appunti riguardanti il corso di "Teoria dell'informazione e delle trasmissioni" 
   - Canale senza memoria
   - Canale binario senza rumore
   - Canale binario simmetrico
+
+  - Lezione-12 del 17 novembre 2023
+
+    - Canale Binario ERASER
