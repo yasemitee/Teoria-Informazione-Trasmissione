@@ -70,3 +70,15 @@ Appunti riguardanti il corso di "Teoria dell'informazione e delle trasmissioni" 
 - Lezione-12 del 17 novembre 2023
 
   - Canale Binario ERASER
+
+- Lezione-13 del 24 novembre 2023
+
+  - Codici per il rilevamento degli errori
+    - Single parity check code
+    - Codice ASCII
+    - Codici pesati
+  - Secondo Teorema di shannon
+    - Estensione _n-esima_
+    - Probabilità di errore di decodifica
+    - Tasso di trasmissione (di un cod. (M,n))
+    - Teorema
