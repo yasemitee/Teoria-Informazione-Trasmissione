@@ -33,7 +33,7 @@ Immaginiamo di voler modellare il lancio di una moneta.
 *Quando invece uno stato ha probabilità maggiore di realizzarsi, l’entropia diminuisce*, e con lei la nostra “sorpresa” nel vedere il risultato. Quindi lanciando una moneta truccata ripetutamente, non saremo sopresi del risultato o se vogliamo il risultato è più predicibile.
 
 == Entropia binaria
-L'entropia binaria è su definita su una variabile casuale Bernoulliana $XX in {0,1}$ dove
+L'entropia binaria è definita su una variabile casuale Bernoulliana $XX in {0,1}$ dove
 $P(XX = 1) = p$ e $P(XX = 0) = 1 - p$, per $p in [0,1]$.
 Quindi dalla definizione di entropia abbiamo che $H(x) = h(p)$ dove
 $ h(p) = p log_2 (1/2) + (1-p) log_2 (1/(1-p)) $
@@ -76,16 +76,16 @@ Sia $XX$ variabile casuale che assume i valori distinti $a_1, dots, a_m$; allora
 #proof[
 (voglio far vedere $lt.eq 0$)
 
-$ H_D (Chi) - log_D m &= sum_(i=1)^m p_i log_D 1 / p_i - log_D m dot underbracket(sum_(i=1)^m  p_i, =1) $ 
+$ H_D (XX) - log_D m &= sum_(i=1)^m p_i log_D 1 / p_i - log_D m dot underbracket(sum_(i=1)^m  p_i, =1) $ 
 $ = sum_(i=1)^m p_i log_D 1 / p_i - p_i log_D m = sum_(i=1)^m p_i dot (log_D 1 / p_i - log_D m) $ $ = sum_(i=1)^m p_i dot (log_D 1 / p_i + log_D m^(-1)) = sum_(i=1)^m p_i dot log_D m^(-1) / p_i ("sistema") $
 
 Io so la maggiorazione del logaritmo
 
 $ sum_(i=1)^m p_i dot ln underbracket(1 / (p_i dot m), x) dot 1 / (ln D) &lt.eq sum_(i=1)^m p_i (1 / (p_i dot m) - 1) 1 / (ln D) \ &lt.eq 1 / (ln D) sum_(i=1)^m 1 / m - p_i = 1 / (ln D) underbracket([ underbracket(sum_(i=1)^m 1 / m, 1) - underbracket(sum_(i=1)^m p_i, 1) ], 0) = 0 $
 
-Quindi $H_D (Chi) - log_D m lt.eq 0 arrow.long H_D (Chi) lt.eq log_D m$
+Quindi $H_D (XX) - log_D m lt.eq 0 arrow.long H_D (XX) lt.eq log_D m$
 
-Ora, se $P(X = a_i) = 1 / m space forall i = 1, dots, m$ allora $ H_D (Chi) = sum_(i=1)^m 1 / p_i log_D 1 / p_i = sum_(i=1)^m 1 / m log_D m = log_D m underbracket(sum_(i=1)^m 1 / m, 1) = log_D m $ 
+Ora, se $P(X = a_i) = 1 / m space forall i = 1, dots, m$ allora $ H_D (XX) = sum_(i=1)^m 1 / m log_D m = log_D m underbracket(sum_(i=1)^m 1 / m, 1) = log_D m $ 
 ]<proof>
 
 == Entropia relativa
