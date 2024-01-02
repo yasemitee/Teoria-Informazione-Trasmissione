@@ -91,15 +91,15 @@ Ora, se $P(X = a_i) = 1 / m space forall i = 1, dots, m$ allora $ H_D (XX) = sum
 == Entropia relativa
 Introduciamo l'entropia relativa $Delta(Chi bar.v.double Y)$ misura la distanza tra $Chi$ e $Y$, la diversità tra $Chi$ e $Y$, due distribuzioni di probabilità
 
-$ Delta(Chi bar.v.double Y) = sum_(s in S) p_X (s) log_D (p_Chi (s)) / (p_Y (s)) $
+$ Delta(XX bar.v.double YY) = sum_(s in S) p_XX (s) log_D (p_XX (s)) / (p_YY (s)) $
 
 $S$ è il dominio sul quale $Chi$ e $Y$ lavorano
 #theorem(numbering:none)[
-per ogni coppia di variabili casuali $Chi,Y$ definite sullo stesso dominio $S$, vale la disuguaglianza $Delta(Chi bar.v.double Y) gt.eq 0$
+per ogni coppia di variabili casuali $XX,YY$ definite sullo stesso dominio $S$, vale la disuguaglianza $Delta(XX bar.v.double YY) gt.eq 0$
 ]<thm>
 #pagebreak()
 #proof[
-$ D(Chi bar.v.double Y) &= sum_(s in S) p_Chi (s) log_D (p_Chi (s)) / (p_Y (s)) = sum_(s in S) p_Chi (s) ln (p_Chi (s)) / (p_Y (s)) 1 / (ln D) \ &= 1 / (ln D) sum_(s in S) p_Chi (s) ln underbracket((p_Chi (s)) / (p_Y (s)), x) \ &gt.eq 1 / (ln D) sum_(s in S) p_Chi (s) dot (1 - (p_Y (s)) / (p_Chi (s))) = 1 / (ln D) sum_(s in S) p_Chi (s) - p_Y (s) \ &gt.eq underbracket(sum_(s in S) p_Chi (s), 1) - underbracket(sum_(s in S) p_Y (S), 1) = 0 $
+$ D(XX bar.v.double YY) &= sum_(s in S) p_XX (s) log_D (p_XX (s)) / (p_YY (s)) = sum_(s in S) p_XX (s) ln (p_XX (s)) / (p_YY (s)) 1 / (ln D) \ &= 1 / (ln D) sum_(s in S) p_XX (s) ln underbracket((p_XX (s)) / (p_YY (s)), x) \ &gt.eq 1 / (ln D) sum_(s in S) p_XX (s) dot (1 - (p_YY (s)) / (p_XX (s))) = 1 / (ln D) sum_(s in S) p_XX (s) - p_YY (s) \ &gt.eq underbracket(sum_(s in S) p_XX (s), 1) - underbracket(sum_(s in S) p_YY (S), 1) = 0 $
 ]<proof>
 == Relazione tra $EE$ e l'entropia
 Ora vediamo relazione tra il valore atteso delle lunghezze del codice e l'entropia
