@@ -18,7 +18,7 @@ $ H(XX,YY) = underbrace(H(XX), "entropia \ndi un evento") + underbrace(H(YY | XX
 Questa formula esprime l'entropia congiunta come la somma dell'entropia marginale di $XX$ e dell'entropia condizionale di $YY$ dato $XX$. In altre parole, l'entropia congiunta di due variabili casuali è la somma dell'entropia della prima variabile e dell'entropia condizionale della seconda variabile data la prima.
 
 è possibile anche riscriverla come:
-$ H(XX,YY) =  H(YY) + H(XX + YY) $
+$ H(XX,YY) =  H(YY) + H(XX | YY) $
 Notiamo che questa relazione vale anche per gli spazi condizionati, ovvero:
 $ H(XX,YY | ZZ) = H(XX | ZZ) + H(YY | XX,ZZ) $
 #pagebreak()
