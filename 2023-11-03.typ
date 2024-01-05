@@ -51,7 +51,7 @@ _Graficamente:_
 #v(12pt)
 
 #figure(
-    image("assets/2023-11-03 dimostrazione-McMillan.svg", width: 100%)
+    image("assets/2023-11-03 dimostrazione-McMillan.svg", width: 55%)
 )
 
 Quindi dopo $k>=1$ (il momento in cui vale la relazione) se $M^k$ è maggiore di 1 allora ad un certo punto sta sopra $k l_max$ (quindi non va bene), mentre se $M^k$ è compreso tra 0 e 1 allora sta sotto $k l_max$.

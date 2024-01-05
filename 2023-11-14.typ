@@ -1,7 +1,15 @@
 = Codifica di canale
 Nel contesto della teoria dell'informazione, un "canale" si riferisce a un concetto fondamentale che descrive il modo in cui l'informazione viene trasmessa da una sorgente a una destinazione attraverso un mezzo fisico o un processo di comunicazione su cui è applicato un rumore. Ricordiamo l’obiettivo generale della codifica canale: vogliamo trasmettere un messaggio attraverso un canale con rumore massimizzando la quantità di informazione trasmessa per uso del canale e simultaneamente minimizzando la probabilità di errore di decodifica. Un canale è così modellato:
 $ angle.l Chi, Y, p(y | x) angle.r $
-Dove $Chi$ è "cosa ha ricevuto il canale", $Y$ è "cosa ha trasmesso il canale" e $p(y | x)$ è la probabilità di ricevere $y in Y$ dato $x in X$ (quindi è la matrice stocastica che abbiamo definito nella prima lezione).
+Dove $Chi$ è "cosa ha ricevuto il canale" o in altre parole _l'input del canale_, $Y$ è "cosa ha trasmesso il canale" o _l'output del canale_ e $p(y | x)$ è la probabilità di ricevere (da parte del ricevente) $y in Y$ dato $x in X$ (quindi è la matrice stocastica che abbiamo definito nella prima lezione).
+
+#v(12pt)
+
+#figure(
+    image("assets/2023-11-14 modello-canale.png", width: 65%)
+)
+
+#v(12pt)
 
 Se non viene specificato nulla, il canale a cui ci riferiamo è binario e senza memoria e dobbiamo tenere a mente che non necessariamente $X != Y$ (non è detto neanche che siano sottoinsiemi, diciamo che se non è un canale molto anomalo per lo meno sono correlati).
 
