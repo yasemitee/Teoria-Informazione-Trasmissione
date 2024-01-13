@@ -22,15 +22,15 @@ Il prossimo risultato rivela che i codici di Shannon forniscono una descrizione 
 
 == Introduzione
 
-#lemma(numbering: none)[Per ogni sorgente $angle.l Chi, p angle.r$ con $Chi = {x_1, dots, x_m}$ e $p = {p_1, dots, p_n}$. Dato il codice istantaneo di Shannon $c$ con lunghezze $l_i = l_c (x_i)$ tali che $l_i = ceil(log_D 1/p_i)$ per $i = 1,dots, m$, vale $ EE[l_c] < H_D (Chi) + 1 $
+#lemma(numbering: none)[Per ogni sorgente $angle.l Chi, p angle.r$ con $Chi = {x_1, dots, x_m}$ e $p = {p_1, dots, p_m}$. Dato il codice istantaneo di Shannon $c$ con lunghezze $l_i = l_c (x_i)$ tali che $l_i = ceil(log_D 1/p_i)$ per $i = 1,dots, m$, vale $ EE[l_c] < H_D (Chi) + 1 $
 ]<thm>
 Quindi con questo teorema, Shannon capisce che il suo codice paga al più 1 bit in più di informazione aggiuntivo.
 
 #proof[ 
 $ EE[l_c] = sum_(i=1)^n p_i ceil(log_D 1/p_i) < sum_(i=1)^n p_i (log_D 1/p_i + 1) $ 
-$ = H_D(Chi) + 1 $
+$ = H_D(XX) + 1 $
 ]<proof>
-Quindi, combinando questo risultato con $EE[l_i] >= H_D (Chi)$ _che vale per ogni codice istantaneo $c$_, otteniamo che il codice di Shannon utilizza un numero di bit che è compreso tra l'entropia e una variabile additiva di 1 bit, in altre parole si avvicina al codice teorico migliore (entropia) sprecando nel caso peggiore un simbolo in più del necessario.
+Quindi, combinando questo risultato con $EE[l_i] >= H_D (XX)$ _che vale per ogni codice istantaneo $c$_, otteniamo che il codice di Shannon utilizza un numero di bit che è compreso tra l'entropia e una variabile additiva di 1 bit, in altre parole si avvicina al codice teorico migliore (entropia) sprecando nel caso peggiore un simbolo in più del necessario.
 
 Tuttavia sorge un problema, perché l'inefficienza dei codici di Shannon cresce linearmente con la lunghezza del messaggio da codificare. Infatti, la lunghezza della codifica di Shannon di un messaggio $(x_1,dots, x_n)$, generato con $n$ estrazioni da una sorgente $angle.l Chi, p angle.r$, è pari a $ sum_(i=1)^n ceil(log_D 1 / p(x_i)) $
 Per risovere questa situazione possiamo usare una tecnica nota come *codifica a blocchi*
@@ -45,9 +45,9 @@ Quindi Shannon sta spostando il problema alla sorgente, da $angle.l Chi, p angle
  Sia $Chi$ una variabile casuale con distribuzione $p$,lavorando con la codifica a blocchi abbiamo $Chi_1,dots, Chi_n$ variabili casuali anch'esse con distribuzione $p$.
 
  Abbiamo che $P_n (x_1, dots, x_n) = product_(i = 1)^n p(x_i)$ definiamo l'entropia 
- $ H(Chi_1, dots, Chi_n) = sum_(x_1, dots, x_n) P_n (x_1,dots, x_n)log_2 1/(P_n (x_1, dots, x_n)) $ _notiamo che il primo termine della moltiplicazione è un produttoria e il secondo possiamo ridurlo a $sum_(i = 1)^n log_2 1/(p(x_i))$_, quindi ricavo che 
+ $ H(XX_1, dots, XX_n) = sum_(x_1, dots, x_n) P_n (x_1,dots, x_n)log_2 1/(P_n (x_1, dots, x_n)) $ _notiamo che il primo termine della moltiplicazione è un produttoria e il secondo possiamo ridurlo a $sum_(i = 1)^n log_2 1/(p(x_i))$_, quindi ricavo che 
  $ H(Chi_1, dots, Chi_n) = sum_x_1, dots, sum_x_n (product_(i=1)^n p(x_i))sum_(i=1)^n log_2 1/(p(x_i)) $ $ = sum_(i=1)^n sum_x_i p(x_i) log_2 1/p(x_i) $
- $ = n H(Chi) $
+ $ = n H(XX) $
  Quindi sto sommando la stessa entropia, cioè l'entropia della sorgente a blocchi di $n$ simboli è $n$ volte l'entropia della sorgente base. 
  
  Siamo ora pronti per enunciare e dimostrare il vero primo teoreama di Shannon o _source coding_.
@@ -55,16 +55,16 @@ Quindi Shannon sta spostando il problema alla sorgente, da $angle.l Chi, p angle
  == Teorema (Primo teorema di Shannon)
  #theorem(name: "Primo teorema di Shannon", numbering: none)[
  Sia $C_n: Chi^n -> D^+$ un codice di Shannon D-ario a blocchi per la sorgente $angle.l Chi, p angle.r$, ossia $l_c (x_1, dots, x_n) = ceil(log 1/P(x_1, dots, x_n))$ allora 
- $ lim_(n->oo) 1/n EE[l_C_n] = H_D (Chi) $
+ $ lim_(n->oo) 1/n EE[l_C_n] = H_D (XX) $
  ]<thm>
  Questo risultato dimostra che se codifichiamo con Shannon a blocchi, allora la lunghezza media della parola di codice per simbolo sorgente è asintotica all'entropia quando la lunghezza del blocco cresce all'infinito, _in altre parole il codice di Shannon diventa asintoticamente ottimo_.
 
 #proof[
  Osserviamo che vale
- $  H_D (x_1, dots, x_n) <= EE[l_c] <= H_D (x_1, dots, x_n) + 1 $
- $ = n H_D (x) <= EE[l_c] <= n H_D (x) + 1 $
+ $  H_D (XX_1, dots, XX_n) <= EE[l_c] <= H_D (XX_1, dots, XX_n) + 1 $
+ $ = n H_D (XX) <= EE[l_c] <= n H_D (XX) + 1 $
  _Dividendo entrambi i mebri per n otteniamo_
- $ H_D (x) <= EE[l_c] <= H_D (x) + 1/n $
+ $ H_D (XX) <= EE[l_c] <= H_D (XX) + 1/n $
  Da quest'ultima relazione ricaviamo l'enunciato del teorema. 
 ]<proof>
  Quindi Shannon dimostra che in assenza di rumore, codificando a blocchi $EE$ si "schiaccia" verso l'entropia, _quindi più grande è il blocco più grande è il vantaggio_.
@@ -73,9 +73,9 @@ Quindi Shannon sta spostando il problema alla sorgente, da $angle.l Chi, p angle
  Un fatto che per ora non abbiamo mai considerato è che in realtà il modello teorico di Shannon $angle.l Chi, p angle.r$ è un modello (troppo) ideale, nella realtà $p$ non la conosciamo (nella maggior parte dei casi), quindi è necessario fare una stima usando un altro modello $angle.l Y, q angle.r$ che simula il modello $Chi$. Quindi ora che abbiamo associato l’entropia alla lunghezza minima media di codici istantanei, diamo un analogo significato operativo all’entropia relativa, mostrando che essa corrisponde alla differenza fra la lunghezza media di un codice di Shannon costruito sul modello di sorgente $Chi$ e quello di un codice di Shannon costruito su un diverso modello di sorgente $Y$.
 
 #theorem()[
- Dato un modello sorgente $angle.l Chi, p angle.r$, se $c: Chi -> D^+$ è un codice di Shannon con lunghezze $l_c (x) = ceil(1/q(x))$, dove $q$ è una distribuzione arbitraria su $Chi$, allora
- $ EE [l_c] < H_D (Chi) + D(X||Y) + 1 $
- dove $Chi$ ha distribuzione $p$ e $Y$ ha distribuzione $q$.
+ Dato un modello sorgente $angle.l Chi, p angle.r$, se $c: Chi -> D^+$ è un codice di Shannon con lunghezze $l_c (x) = ceil(1/q(x))$, dove $q$ è una distribuzione arbitraria su $XX$, allora
+ $ EE [l_c] < H_D (XX) + D(X||Y) + 1 $
+ dove $XX$ ha distribuzione $p$ e $Y$ ha distribuzione $q$.
 ]<thm>
 
  #proof[
