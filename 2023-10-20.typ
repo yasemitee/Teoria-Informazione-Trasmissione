@@ -28,14 +28,14 @@ Se non metto pedici è entropia binaria $D = 2$ e in questo caso l'unità di mis
 === Esempio
 Immaginiamo di voler modellare il lancio di una moneta.
 
-*Il caso con entropia maggiore* è quello più “incerto”, ovvero quello in cui testa e croce hanno la medesima probabilità di uscire: prima di lanciare la moneta, non si ha modo di azzeccare quale faccia cadrà a testa in giù.
+_Il caso con entropia maggiore_ è quello più “incerto”, ovvero quello in cui testa e croce hanno la medesima probabilità di uscire: prima di lanciare la moneta, non si ha modo di azzeccare quale faccia cadrà a testa in giù.
 
-*Quando invece uno stato ha probabilità maggiore di realizzarsi, l’entropia diminuisce*, e con lei la nostra “sorpresa” nel vedere il risultato. Quindi lanciando una moneta truccata ripetutamente, non saremo sopresi del risultato o se vogliamo il risultato è più predicibile.
+_Quando invece uno stato ha probabilità maggiore di realizzarsi, l’entropia diminuisce_, e con lei la nostra “sorpresa” nel vedere il risultato. Quindi lanciando una moneta truccata ripetutamente, non saremo sopresi del risultato o se vogliamo il risultato è più predicibile.
 
 == Entropia binaria
 L'entropia binaria è definita su una variabile casuale Bernoulliana $XX in {0,1}$ dove
 $P(XX = 1) = p$ e $P(XX = 0) = 1 - p$, per $p in [0,1]$.
-Quindi dalla definizione di entropia abbiamo che $H(x) = h(p)$ dove
+Quindi dalla definizione di entropia abbiamo che $H(XX) = h(p)$ dove
 $ h(p) = p log_2 (1/p) + (1-p) log_2 (1/(1-p)) $
 
 #v(12pt)
@@ -110,7 +110,7 @@ sia $c : Chi arrow DD^+$ codice istantaneo $D$-ario per una sorgente $angle.l Ch
 #proof[
 Definisco $ZZ : Chi arrow.long RR$ variabile casuale alla quale associamo una distribuzione di probabilità $ q(x) = D^(-l_c (x)) / ( limits(sum)_(x' in Chi) D^(-l_c (x')) ) $
 Possiamo quindi scrivere:
-$ EE[l_c] - H_D (Chi) = sum_(x in Chi) p_i l_c (x_i) - sum_(x in Chi)^m p(x) log_D 1 / p(x) $ $ = sum_(x in Chi) p(x) dot (l_c (x) - log_D 1 / p(x)) = sum_(x in Chi) p(x) dot (log_D D^(l_c (x)) - log_D 1 / p(x)) $ $ = sum_(x in Chi) p(x) dot (log_D D^(l_c (x)) + log_D p(x)) = sum_(x in Chi) p(x) log_D ( D^(l_c (x)) dot p(x)) $ $ = sum_(x in Chi) p(x) dot (log_D (p(x)) / (D^(-l_c (x))) dot 1) = sum_(x in X) p(x) dot (log_D (p(x) / (D^(-l_c (x))) dot (sum_(x' in Chi) D^(-l_c (x'))) / (sum_(x' in Chi) D^(-l_c (x')))))  $ $ = sum_(x in Chi) p(x) dot (log_D p(x) (sum_(x' in Chi) D^(-l_c (x'))) / (D^(-l_c (x))) - log_D sum_(x' in Chi) D^(-l_c (x'))) $ $ = sum_(x in Chi) p(x) dot (log_D p(x) / q(x) - log_D sum_(x' in Chi) D^(-l_c (x'))) $ $ = sum_(x in Chi) p(x) log_D p(x) / q(x) - p(x) log_D sum_(x' in Chi) D^(-l_c (x')) $ $ = sum_(x in Chi) p(x) log_D p(x) / q(x) - sum_(x in Chi) p(x) log_D sum_(x' in Chi) D^(-l_c (x')) $ $ = underbracket(Delta(Chi bar.v.double ZZ), gt.eq 0) underbracket(- underbracket(log_D sum_(x' in Chi) D^(-l_c (x')), "c istantaneo" arrow log(t lt.eq 1) lt.eq 0), gt.eq 0) dot underbracket(sum_(x in Chi) p(x), =1) gt.eq 0 $
+$ EE[l_c] - H_D (Chi) = sum_(x in Chi) p(x) l_c (x) - sum_(x in Chi)^m p(x) log_D 1 / p(x) $ $ = sum_(x in Chi) p(x) dot (l_c (x) - log_D 1 / p(x)) = sum_(x in Chi) p(x) dot (log_D D^(l_c (x)) - log_D 1 / p(x)) $ $ = sum_(x in Chi) p(x) dot (log_D D^(l_c (x)) + log_D p(x)) = sum_(x in Chi) p(x) log_D ( D^(l_c (x)) dot p(x)) $ $ = sum_(x in Chi) p(x) dot (log_D (p(x)) / (D^(-l_c (x))) dot 1) = sum_(x in X) p(x) dot (log_D (p(x) / (D^(-l_c (x))) dot (sum_(x' in Chi) D^(-l_c (x'))) / (sum_(x' in Chi) D^(-l_c (x')))))  $ $ = sum_(x in Chi) p(x) dot (log_D p(x) (sum_(x' in Chi) D^(-l_c (x'))) / (D^(-l_c (x))) - log_D sum_(x' in Chi) D^(-l_c (x'))) $ $ = sum_(x in Chi) p(x) dot (log_D p(x) / q(x) - log_D sum_(x' in Chi) D^(-l_c (x'))) $ $ = sum_(x in Chi) p(x) log_D p(x) / q(x) - p(x) log_D sum_(x' in Chi) D^(-l_c (x')) $ $ = sum_(x in Chi) p(x) log_D p(x) / q(x) - sum_(x in Chi) p(x) log_D sum_(x' in Chi) D^(-l_c (x')) $ $ = underbracket(Delta(Chi bar.v.double ZZ), gt.eq 0) underbracket(- underbracket(log_D sum_(x' in Chi) D^(-l_c (x')), "c istantaneo" arrow log(t lt.eq 1) lt.eq 0), gt.eq 0) dot underbracket(sum_(x in Chi) p(x), =1) gt.eq 0 $
 ]
 
 Questo risultato dà un significato operativo all'entropia, mostrando che l'entropia di una variabile casuale $XX$ è un limite inferiore (lower bound) al numero di simboli di codice istantaneo che dobbiamo usare in media per descrivere una relazione di $XX$.
