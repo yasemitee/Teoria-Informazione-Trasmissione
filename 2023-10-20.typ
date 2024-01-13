@@ -119,10 +119,11 @@ Questo risultato dà un significato operativo all'entropia, mostrando che l'entr
 
 Algoritmo che permette di dimostrare se un codice è univocamente decodificabile
 
-Inserisci due esempi risolti a mano
-
 Sia $S_1 = Chi$, allora proseguo in modo iterativo applicando le due regole seguenti:
 - per ogni $x in S_1$, se esiste $y in S_i$ tale che $\x\y in S_i$ allora $y in S_(i+1)$
 - per ogni $z in S_i$, se esiste $y in S_1$ tale che $\x\y in S_1$ allora $y in S_(i+1)$
 
-Inserisci secondo esempio risolto con Sardinas-Patterson
+Quindi
+1. $S_0$ è il codice di partenza.
+2. Per costruire $S_(i+1)$ vado a vedere se qualche parola di $S_i$ è prefisso di qualche parola di $S_i$ e se sì aggiungo la parola più lunga a $S_(i+1)$. Se non c'è nessuna parola di $S_i$ che è prefisso di una parola di $S_i$ allora il codice è univocamente decodificabile.
+3. controllo se negli elementi di $S_(i+1)$ c'è una parola di codice di $S_0$ e se sì il codice non è univocamente decodificabile altrimenti torno al punto 2.
