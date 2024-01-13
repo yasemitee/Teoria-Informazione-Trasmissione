@@ -172,7 +172,7 @@ Dato il canale $angle.l Chi, Y, p(y|x) angle.r$ definiamo l'estensione _n-esima_
 la sequenza $x^n in X^n$. Ricordiamo che essendo il canale senza memoria vale $product_(t=1)^n (y_t | x_t)$.
 
 Ora dobbiamo costruire un codice per il nostra canale, che sarà di tipo $(M,n)$, dove:
-- M = insieme di messaggi che voglio trasmettere ${1, dots, M}$
+- M = è il numero di messaggi che voglio trasmettere (ovvero il numero di simboli che voglio codificare), quindi ${1, dots, M}$ è l'insieme dei messaggi
 - n = numumero di volte che utilizzo il canale
 Definiamo anche due funzioni:
 - Funzione di codifica $x^n: {1, dots, M} -> Chi^n$ che prende un messaggio e lo codifica in una stringa da immmettere nel canale.
