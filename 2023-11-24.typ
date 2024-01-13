@@ -172,13 +172,13 @@ Dato il canale $angle.l Chi, Y, p(y|x) angle.r$ definiamo l'estensione _n-esima_
 la sequenza $x^n in X^n$. Ricordiamo che essendo il canale senza memoria vale $product_(t=1)^n (y_t | x_t)$.
 
 Ora dobbiamo costruire un codice per il nostra canale, che sarà di tipo $(M,n)$, dove:
-- M = numero dei messaggi che spedisco
+- M = insieme di messaggi che voglio trasmettere ${1, dots, M}$
 - n = numumero di volte che utilizzo il canale
 Definiamo anche due funzioni:
-- Funzione di codifica $x^n: {1, dots, M} -> Chi^n$ che prende un messaggio e lo codifica in una stringa
-- Funzione di decodifica $g: Y^n -> {1, dots, M}$
+- Funzione di codifica $x^n: {1, dots, M} -> Chi^n$ che prende un messaggio e lo codifica in una stringa da immmettere nel canale.
+- Funzione di decodifica $g: Y^n -> {1, dots, M}$ che prende una stringa ricevuta dal canale e la decodifica in un messaggio.
 == Probabilità di errore di decodifica
-Dato un codice canale, la probabilità di errore di decodifica del messaggio i è definita come
+Dato un codice canale, la probabilità di errore di decodifica del messaggio $i$ è definita come
 $ lambda_i = P(g(YY^n) != i | XX^n = x^n (i)) $
 In sostanza ci chiediamo qual'è la probabilità che la stringa ricevuta sia diversa da $i$ sapendo che la codifica della stringa $i$
 
