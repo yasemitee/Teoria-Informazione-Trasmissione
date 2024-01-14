@@ -32,7 +32,7 @@ $ = H_D(XX) + 1 $
 ]<proof>
 Quindi, combinando questo risultato con $EE[l_i] >= H_D (XX)$ _che vale per ogni codice istantaneo $c$_, otteniamo che il codice di Shannon utilizza un numero di bit che è compreso tra l'entropia e una variabile additiva di 1 bit, in altre parole si avvicina al codice teorico migliore (entropia) sprecando nel caso peggiore un simbolo in più del necessario.
 
-Tuttavia sorge un problema, perché l'inefficienza dei codici di Shannon cresce linearmente con la lunghezza del messaggio da codificare. Infatti, la lunghezza della codifica di Shannon di un messaggio $(x_1,dots, x_n)$, generato con $n$ estrazioni da una sorgente $angle.l Chi, p angle.r$, è pari a $ sum_(i=1)^n ceil(log_D 1 / p(x_i)) $
+Tuttavia sorge un problema, perché l'inefficienza dei codici di Shannon cresce linearmente con la lunghezza del messaggio da codificare. Infatti, la lunghezza della codifica di Shannon di un messaggio $(x_1,dots, x_n)$, generato con $n$ estrazioni da una sorgente $angle.l Chi, p angle.r$, è pari a $ sum_(i=1)^n ceil(log_D 1 / p(x_i)) $, che cresce linearmente con $n$.
 Per risovere questa situazione possiamo usare una tecnica nota come *codifica a blocchi*
 == Codifica a blocchi
 === Definizione
@@ -48,7 +48,7 @@ Quindi Shannon sta spostando il problema alla sorgente, da $angle.l Chi, p angle
  $ H(XX_1, dots, XX_n) = sum_(x_1, dots, x_n) P_n (x_1,dots, x_n)log_2 1/(P_n (x_1, dots, x_n)) $ _notiamo che il primo termine della moltiplicazione è un produttoria e il secondo possiamo ridurlo a $sum_(i = 1)^n log_2 1/(p(x_i))$_, quindi ricavo che 
  $ H(Chi_1, dots, Chi_n) = sum_x_1, dots, sum_x_n (product_(i=1)^n p(x_i))sum_(i=1)^n log_2 1/(p(x_i)) $ $ = sum_(i=1)^n sum_x_i p(x_i) log_2 1/p(x_i) $
  $ = n H(XX) $
- Quindi sto sommando la stessa entropia, cioè l'entropia della sorgente a blocchi di $n$ simboli è $n$ volte l'entropia della sorgente base. 
+ Quindi sto sommando la stessa entropia, cioè l'entropia della sorgente a blocchi di $n$ simboli è $n$ volte l'entropia della sorgente base.
  
  Siamo ora pronti per enunciare e dimostrare il vero primo teoreama di Shannon o _source coding_.
 
@@ -61,13 +61,13 @@ Quindi Shannon sta spostando il problema alla sorgente, da $angle.l Chi, p angle
 
 #proof[
  Osserviamo che vale
- $  H_D (XX_1, dots, XX_n) <= EE[l_c] <= H_D (XX_1, dots, XX_n) + 1 $
- $ = n H_D (XX) <= EE[l_c] <= n H_D (XX) + 1 $
+ $  H_D (XX_1, dots, XX_n) <= EE[l_C_n] <= H_D (XX_1, dots, XX_n) + 1 $
+ $ = n H_D (XX) <= EE[l_C_n] <= n H_D (XX) + 1 $
  _Dividendo entrambi i mebri per n otteniamo_
- $ H_D (XX) <= EE[l_c] <= H_D (XX) + 1/n $
- Da quest'ultima relazione ricaviamo l'enunciato del teorema. 
+ $ H_D (XX) <= 1/n EE[l_C_n] <= H_D (XX) + 1/n $
+ Da quest'ultima relazione ricaviamo l'enunciato del teorema, infatti per $n -> oo$ abbiamo che $1/n -> 0$ e quindi $1/n EE[l_C_n] -> H_D (XX)$
 ]<proof>
- Quindi Shannon dimostra che in assenza di rumore, codificando a blocchi $EE$ si "schiaccia" verso l'entropia, _quindi più grande è il blocco più grande è il vantaggio_.
+ Quindi Shannon dimostra che in assenza di rumore, codificando a blocchi $EE$ si "schiaccia" verso l'entropia, _quindi più grande è il blocco più grande è il vantaggio_. 
 
  == Significato operativo all'entropia relativa
  Un fatto che per ora non abbiamo mai considerato è che in realtà il modello teorico di Shannon $angle.l Chi, p angle.r$ è un modello (troppo) ideale, nella realtà $p$ non la conosciamo (nella maggior parte dei casi), quindi è necessario fare una stima usando un altro modello $angle.l Y, q angle.r$ che simula il modello $Chi$. Quindi ora che abbiamo associato l’entropia alla lunghezza minima media di codici istantanei, diamo un analogo significato operativo all’entropia relativa, mostrando che essa corrisponde alla differenza fra la lunghezza media di un codice di Shannon costruito sul modello di sorgente $Chi$ e quello di un codice di Shannon costruito su un diverso modello di sorgente $Y$.
